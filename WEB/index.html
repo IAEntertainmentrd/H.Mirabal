@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Museo Hermanas Mirabal — Salcedo, República Dominicana</title>
+  <meta name="description"
+    content="El Museo de las Hermanas Mirabal en Salcedo preserva la memoria, el legado y la resistencia de Patria, Minerva y María Teresa Mirabal, símbolos eternos de valentía dominicana." />
+  <meta name="keywords"
+    content="Hermanas Mirabal, Museo, Salcedo, República Dominicana, Mariposas, patrimonio, historia" />
+  <meta property="og:title" content="Casa Museo Hermanas Mirabal" />
+  <meta property="og:description" content="Memoria, resistencia y legado. Un espacio vivo de identidad dominicana." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════ HEADER ══ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo" id="logo-link" aria-label="Casa Museo Hermanas Mirabal — Inicio">
+        <div class="logo-mark">
+          <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Mariposa estilizada, muy minimalista -->
+            <path d="M20 24 C14 18, 4 16, 6 8 C8 2, 18 6, 20 14 C22 6, 32 2, 34 8 C36 16, 26 18, 20 24Z"
+              fill="currentColor" opacity="0.7" />
+            <path d="M20 24 C14 30, 4 32, 6 40 C8 46, 18 42, 20 34 C22 42, 32 46, 34 40 C36 32, 26 30, 20 24Z"
+              fill="currentColor" opacity="0.4" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Casa Museo</span>
+          <span class="logo-subtitle">Hermanas Mirabal</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#historia" class="nav-link">Historia</a></li>
+          <li><a href="#las-hermanas" class="nav-link">Las Hermanas</a></li>
+          <li><a href="#visita" class="nav-link">Visita</a></li>
+          <li><a href="#actividades" class="nav-link">Actividades</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#visita" class="btn-primary btn-header" id="btn-planifica-header">
+        Planifica tu visita
+      </a>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false"
+        aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════ HERO ══ -->
+  <section class="hero" id="inicio" aria-label="Sección principal">
+    <div class="hero-media">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Casa_Museo_Hermanas_Mirabal_-_exterior.jpg/1920px-Casa_Museo_Hermanas_Mirabal_-_exterior.jpg"
+        alt="Exterior de la Casa Museo Hermanas Mirabal en Salcedo, República Dominicana" class="hero-image"
+        id="hero-bg-image" onerror="this.parentElement.classList.add('hero-media--fallback')" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content" id="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Salcedo, República Dominicana</span>
+      </div>
+      <h1 class="hero-title">Casa Museo<br />Hermanas Mirabal</h1>
+      <p class="hero-subtitle">
+        Un espacio donde la memoria no descansa.<br />
+        Donde la resistencia se convirtió en legado y el silencio, en historia.
+      </p>
+      <div class="hero-actions">
+        <a href="#historia" class="btn-primary" id="btn-explorar-historia">Explorar la historia</a>
+        <a href="#visita" class="btn-ghost" id="btn-planifica-hero">Planifica tu visita</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Descubrir</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ INTRODUCCIÓN ══ -->
+  <section class="intro-block" id="historia" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-label">
+          <span class="section-tag">El Museo</span>
+        </div>
+        <div class="intro-body">
+          <h2 class="intro-heading" id="intro-heading">
+            Un lugar donde la memoria<br />permanece viva
+          </h2>
+          <div class="intro-divider" aria-hidden="true"></div>
+          <p class="intro-text">
+            La Casa Museo Hermanas Mirabal, ubicada en el corazón de Salcedo, es el hogar que fue. Es también el
+            testimonio que quedó. Preserva los espacios donde Patria, Minerva y María Teresa vivieron, soñaron y
+            resistieron, transformando la intimidad de una familia en el símbolo más poderoso de la lucha contra la
+            tiranía en la historia dominicana.
+          </p>
+          <p class="intro-text">
+            Hoy, este lugar es patrimonio de todos. Un espacio de memoria activa, de educación y de dignidad, dedicado a
+            honrar a tres mujeres cuya valentía cambió el rumbo de una nación.
+          </p>
+          <div class="intro-stats" aria-label="Cifras del museo">
+            <div class="stat-item">
+              <span class="stat-number">1960</span>
+              <span class="stat-label">Año del sacrificio</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1994</span>
+              <span class="stat-label">Apertura del museo</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Hermanas, una historia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ LAS MARIPOSAS ══ -->
+  <section class="sisters-section" id="las-hermanas" aria-labelledby="sisters-heading">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Las Mariposas</span>
+        <h2 class="section-title" id="sisters-heading">Patria, Minerva y María Teresa</h2>
+        <p class="section-subtitle">Tres vidas. Una sola convicción. Un legado eterno.</p>
+      </div>
+
+      <div class="sisters-grid">
+
+        <!-- Patria -->
+        <article class="sister-card" id="card-patria" aria-labelledby="patria-name">
+          <div class="sister-image-wrap">
+            <div class="sister-image sister-image--patria" role="img"
+              aria-label="Imagen representativa de Patria Mirabal">
+              <img class="sister-photo" id="photo-patria" src="" alt="Patria Mirabal"
+                onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')">
+              <div class="sister-image-overlay"></div>
+              <span class="sister-initial" aria-hidden="true">P</span>
+            </div>
+            <div class="sister-birth-year" aria-label="Años de vida">1924 – 1960</div>
+          </div>
+          <div class="sister-body">
+            <div class="sister-ornament" aria-hidden="true"></div>
+            <h3 class="sister-name" id="patria-name">Patria Mercedes</h3>
+            <span class="sister-role">La fe hecha mujer</span>
+            <p class="sister-desc">
+              La mayor de las hermanas, mujer de profunda fe y corazón inmenso. Su transformación de devota católica a
+              combatiente revolucionaria muestra que la justicia puede nacer de la espiritualidad más sincera. Su amor
+              por su tierra lo entregó todo.
+            </p>
+            <div class="sister-quote">
+              <blockquote>"Nadie puede quitarnos lo que llevamos en el alma."</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- Minerva -->
+        <article class="sister-card sister-card--featured" id="card-minerva" aria-labelledby="minerva-name">
+          <div class="sister-image-wrap">
+            <div class="sister-image sister-image--minerva" role="img"
+              aria-label="Imagen representativa de Minerva Mirabal">
+              <img class="sister-photo" id="photo-minerva" src="" alt="Minerva Mirabal"
+                onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')">
+              <div class="sister-image-overlay"></div>
+              <span class="sister-initial" aria-hidden="true">M</span>
+            </div>
+            <div class="sister-birth-year" aria-label="Años de vida">1926 – 1960</div>
+          </div>
+          <div class="sister-body">
+            <div class="sister-ornament" aria-hidden="true"></div>
+            <h3 class="sister-name" id="minerva-name">Minerva Mirabal</h3>
+            <span class="sister-role">La voz de la resistencia</span>
+            <p class="sister-desc">
+              Abogada, intelectual y luchadora incansable. Minerva fue el alma política del movimiento. Su valentía al
+              desafiar directamente al dictador Trujillo la convirtió en símbolo de la resistencia más lúcida. Ella
+              eligió la libertad cuando la libertad era peligrosa.
+            </p>
+            <div class="sister-quote">
+              <blockquote>"Si me matan, sacaré mis brazos de la tumba y seré más fuerte."</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- María Teresa -->
+        <article class="sister-card" id="card-mariateresa" aria-labelledby="mariateresa-name">
+          <div class="sister-image-wrap">
+            <div class="sister-image sister-image--mariateresa" role="img"
+              aria-label="Imagen representativa de María Teresa Mirabal">
+              <img class="sister-photo" id="photo-mariateresa" src="" alt="María Teresa Mirabal"
+                onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')">
+              <div class="sister-image-overlay"></div>
+              <span class="sister-initial" aria-hidden="true">MT</span>
+            </div>
+            <div class="sister-birth-year" aria-label="Años de vida">1935 – 1960</div>
+          </div>
+          <div class="sister-body">
+            <div class="sister-ornament" aria-hidden="true"></div>
+            <h3 class="sister-name" id="mariateresa-name">María Teresa</h3>
+            <span class="sister-role">La valentía más joven</span>
+            <p class="sister-desc">
+              La menor de las tres, guardó en su diario íntimo el testimonio más humano de la lucha. Joven, apasionada y
+              determinada, su historia nos recuerda que la valentía no tiene edad. Su diario es hoy uno de los
+              documentos más conmovedores de la historia dominicana.
+            </p>
+            <div class="sister-quote">
+              <blockquote>"Quisiera hacer algo, aunque fuera pequeño, por mi país."</blockquote>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════ LA CASA COMO TESTIMONIO ══ -->
+  <section class="casa-section" id="la-casa" aria-labelledby="casa-heading">
+    <div class="casa-grid">
+      <div class="casa-image-col">
+        <div class="casa-image-wrap">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Interior_Casa_Museo_Mirabal.jpg/800px-Interior_Casa_Museo_Mirabal.jpg"
+            alt="Interior de la Casa Museo Hermanas Mirabal, con objetos personales preservados" class="casa-img"
+            id="casa-interior-img" onerror="this.parentElement.classList.add('casa-image--fallback')" />
+          <div class="casa-image-caption">
+            <span>— Interior, Casa Museo, Salcedo</span>
+          </div>
+        </div>
+      </div>
+      <div class="casa-text-col">
+        <div class="casa-text-inner">
+          <span class="section-tag">Patrimonio vivo</span>
+          <h2 class="section-title left" id="casa-heading">La casa<br />como testimonio</h2>
+          <div class="section-divider left" aria-hidden="true"></div>
+          <p class="body-text">
+            Las paredes de esta casa guardan algo que ningún archivo puede reproducir: la presencia. Los muebles, los
+            libros, los objetos cotidianos que pertenecieron a las hermanas permanecen en su lugar, como si el tiempo
+            hubiera decidido detenerse en el momento en que todo cambió.
+          </p>
+          <p class="body-text">
+            Visitar la Casa Museo es una experiencia de contacto directo con la historia. No como espectador, sino como
+            testigo. Cada habitación habla. Cada objeto tiene voz. El jardín florece cada primavera como recordatorio de
+            que la vida siempre vuelve a abrirse paso.
+          </p>
+          <div class="casa-features">
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <div>
+                <strong>Hogar original</strong>
+                <span>Los espacios se conservan tal como eran</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <strong>Patrimonio nacional</strong>
+                <span>Declarado bien cultural del Estado dominicano</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+                </svg>
+              </div>
+              <div>
+                <strong>Archivo histórico</strong>
+                <span>Documentos, fotografías y objetos personales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ LÍNEA DE TIEMPO ══ -->
+  <section class="timeline-section" id="timeline" aria-labelledby="timeline-heading">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Cronología</span>
+        <h2 class="section-title" id="timeline-heading">Hitos de una historia</h2>
+        <p class="section-subtitle">Momentos que definieron el rumbo de la República Dominicana</p>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1924</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Nace Patria Mercedes</h3>
+            <p>Primera de las hermanas Mirabal, nacida en Ojo de Agua, Salcedo. Su vida marcaría el comienzo de una
+              historia de fe y resistencia.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1930</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Rafael Trujillo asume el poder</h3>
+            <p>Inicio de una de las dictaduras más brutales de América Latina, que duraría 31 años y definiría el
+              contexto de toda la vida de las Mirabal.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1949</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">El incidente con Trujillo</h3>
+            <p>Minerva rechaza abiertamente los avances de Trujillo en una fiesta oficial. Este acto de valentía
+              sellaría el destino de las hermanas y encendería su militancia.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1960</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">El 25 de noviembre</h3>
+            <p>Patria, Minerva y María Teresa son asesinadas por orden de Trujillo en la carretera de Salcedo. Su muerte
+              despierta la conciencia de la nación y acelera el fin de la dictadura.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1961</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Fin de la Era Trujillo</h3>
+            <p>El 30 de mayo de 1961, Trujillo es ajusticiado. Las hermanas Mirabal se convierten en mártires de la
+              democracia dominicana.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1994</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Apertura del Museo</h3>
+            <p>La casa familiar se convierte en museo nacional, preservando el legado de las hermanas para las
+              generaciones futuras.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">1999</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Día Internacional</h3>
+            <p>La ONU designa el 25 de noviembre como Día Internacional de la Eliminación de la Violencia contra la
+              Mujer, en honor a las Mirabal.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-year">Hoy</div>
+          <div class="timeline-content">
+            <h3 class="timeline-event">Símbolo universal</h3>
+            <p>Las hermanas Mirabal son reconocidas en todo el mundo como símbolo de la lucha por los derechos de la
+              mujer y la libertad humana.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ ACTIVIDADES ══ -->
+  <section class="activities-section" id="actividades" aria-labelledby="activities-heading">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Agenda</span>
+        <h2 class="section-title" id="activities-heading">Actividades y exposiciones</h2>
+        <p class="section-subtitle">Un programa cultural activo al servicio de la memoria y la comunidad</p>
+      </div>
+
+      <div class="activities-grid">
+
+        <article class="activity-card" id="activity-guided-tours" aria-labelledby="act-heading-1">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+            </div>
+            <div class="activity-type">Visita guiada</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-1">Recorrido por la Casa Museo</h3>
+          <p class="activity-desc">Nuestros guías especializados acompañan a los visitantes por cada sala, contando la
+            historia de las hermanas a través de los objetos y espacios que habitaron.</p>
+          <div class="activity-meta">
+            <span class="activity-schedule">Martes a domingo · 9:00 – 17:00</span>
+            <span class="activity-price">Entrada libre</span>
+          </div>
+        </article>
+
+        <article class="activity-card" id="activity-education" aria-labelledby="act-heading-2">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="activity-type">Educación</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-2">Programa educativo escolar</h3>
+          <p class="activity-desc">Visitas pedagógicas para centros educativos, con talleres de historia, ética cívica y
+            derechos humanos. Adaptadas para primaria, secundaria y universidad.</p>
+          <div class="activity-meta">
+            <span class="activity-schedule">Previa reservación</span>
+            <span class="activity-price">Programas especiales</span>
+          </div>
+        </article>
+
+        <article class="activity-card activity-card--highlighted" id="activity-nov25" aria-labelledby="act-heading-3">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <div class="activity-type">Conmemoración</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-3">25 de noviembre</h3>
+          <p class="activity-desc">Cada año, el Día Internacional de la Eliminación de la Violencia contra la Mujer es
+            el centro de una semana de actos culturales, conferencias, exposiciones temporales y ceremonias de memoria.
+          </p>
+          <div class="activity-meta">
+            <span class="activity-schedule">25 de noviembre · Anual</span>
+            <span class="activity-price">Programación especial</span>
+          </div>
+        </article>
+
+        <article class="activity-card" id="activity-exhibitions" aria-labelledby="act-heading-4">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+            <div class="activity-type">Exposición</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-4">Galería fotográfica permanente</h3>
+          <p class="activity-desc">Una colección de fotografías históricas que documentan la vida íntima y pública de
+            las hermanas, la familia Mirabal y la República Dominicana de los años 50.</p>
+          <div class="activity-meta">
+            <span class="activity-schedule">Permanente</span>
+            <span class="activity-price">Incluida en la visita</span>
+          </div>
+        </article>
+
+        <article class="activity-card" id="activity-talks" aria-labelledby="act-heading-5">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+              </svg>
+            </div>
+            <div class="activity-type">Conferencias</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-5">Ciclos de charlas y diálogos</h3>
+          <p class="activity-desc">Encuentros con historiadores, activistas, artistas y académicos en torno a la memoria
+            histórica, la resistencia y los derechos humanos en el Caribe.</p>
+          <div class="activity-meta">
+            <span class="activity-schedule">Calendariado mensual</span>
+            <span class="activity-price">Entrada libre</span>
+          </div>
+        </article>
+
+        <article class="activity-card" id="activity-library" aria-labelledby="act-heading-6">
+          <div class="activity-header">
+            <div class="activity-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+              </svg>
+            </div>
+            <div class="activity-type">Biblioteca</div>
+          </div>
+          <h3 class="activity-title" id="act-heading-6">Centro de documentación</h3>
+          <p class="activity-desc">Un fondo bibliográfico especializado en la historia de las Mirabal, la Era de
+            Trujillo y la historia política y social de la República Dominicana.</p>
+          <div class="activity-meta">
+            <span class="activity-schedule">Consulta con previa cita</span>
+            <span class="activity-price">Investigadores y estudiantes</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PLANIFICA TU VISITA ══ -->
+  <section class="visit-section" id="visita" aria-labelledby="visit-heading">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Visita</span>
+        <h2 class="section-title" id="visit-heading">Planifica tu visita</h2>
+        <p class="section-subtitle">Toda la información que necesitas para llegar y disfrutar de la experiencia</p>
+      </div>
+
+      <div class="visit-grid">
+
+        <div class="visit-info-block" id="visit-hours">
+          <div class="visit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3>Horarios</h3>
+          <dl class="hours-list">
+            <div>
+              <dt>Martes – Viernes</dt>
+              <dd>9:00 – 17:00</dd>
+            </div>
+            <div>
+              <dt>Sábado – Domingo</dt>
+              <dd>9:00 – 16:00</dd>
+            </div>
+            <div class="closed">
+              <dt>Lunes</dt>
+              <dd>Cerrado</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="visit-info-block" id="visit-admission">
+          <div class="visit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 9a3 3 0 010 6v2a2 2 0 002 2h16a2 2 0 002-2v-2a3 3 0 010-6V7a2 2 0 00-2-2H4a2 2 0 00-2 2v2z" />
+            </svg>
+          </div>
+          <h3>Entradas</h3>
+          <dl class="admission-list">
+            <div>
+              <dt>Adultos</dt>
+              <dd>RD$100</dd>
+            </div>
+            <div>
+              <dt>Niños y estudiantes</dt>
+              <dd>RD$50</dd>
+            </div>
+            <div class="highlight">
+              <dt>Grupos escolares</dt>
+              <dd>Entrada libre</dd>
+            </div>
+            <div class="highlight">
+              <dt>25 de noviembre</dt>
+              <dd>Entrada libre</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="visit-info-block" id="visit-location">
+          <div class="visit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <h3>Ubicación</h3>
+          <address class="visit-address">
+            Carretera Salcedo – Tenares,<br />
+            Ojo de Agua, Salcedo 41000,<br />
+            República Dominicana
+          </address>
+          <a href="https://maps.google.com/?q=Casa+Museo+Hermanas+Mirabal+Salcedo" target="_blank"
+            rel="noopener noreferrer" class="map-link" id="map-link-google">
+            Ver en Google Maps
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="visit-info-block" id="visit-contact">
+          <div class="visit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.58 10.8 19.79 19.79 0 01.49 2.18 2 2 0 012.48 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.71-1.71a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+          </div>
+          <h3>Contacto</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="tel:+18095770760" id="contact-phone">+1 (809) 577-0760</a>
+            </li>
+            <li>
+              <a href="mailto:info@museomirabal.gob.do" id="contact-email">info@museomirabal.gob.do</a>
+            </li>
+          </ul>
+          <div class="social-links" aria-label="Redes sociales">
+            <a href="#" class="social-link" id="social-facebook" aria-label="Facebook del museo">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-instagram" aria-label="Instagram del museo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-twitter" aria-label="Twitter del museo">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mapa visual -->
+      <div class="visit-map-block">
+        <div class="visit-map" id="visit-map-placeholder" role="img"
+          aria-label="Mapa de ubicación de la Casa Museo Hermanas Mirabal en Salcedo, República Dominicana">
+          <div class="map-bg-pattern" aria-hidden="true"></div>
+          <div class="map-pin-container" aria-hidden="true">
+            <div class="map-pin">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" fill="white" />
+              </svg>
+            </div>
+            <div class="map-label">Casa Museo Hermanas Mirabal</div>
+          </div>
+          <a href="https://maps.google.com/?q=Casa+Museo+Hermanas+Mirabal+Salcedo" target="_blank"
+            rel="noopener noreferrer" class="map-overlay-link" id="map-overlay-btn">
+            Abrir en Google Maps
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ CIERRE EMOCIONAL ══ -->
+  <section class="cta-section" id="cta-section" aria-labelledby="cta-heading">
+    <div class="cta-inner">
+      <div class="cta-bg-element" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content">
+          <p class="cta-preheading">Su historia merece ser recordada</p>
+          <h2 class="cta-title" id="cta-heading">
+            Ven a conocer<br />a las Mariposas
+          </h2>
+          <p class="cta-text">
+            Hay lugares en el mundo donde el aire tiene memoria. La Casa Museo Hermanas Mirabal es uno de ellos.
+            Visítala, recórrela, siente lo que significa que tres mujeres hayan decidido que la libertad valía más que
+            la vida. Y lleva ese recuerdo contigo.
+          </p>
+          <div class="cta-signature" aria-hidden="true">
+            <svg class="signature-butterfly" viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 24 C28 16, 8 14, 12 4 C16 -4, 36 4, 40 18 C44 4, 64 -4, 68 4 C72 14, 52 16, 40 24Z"
+                fill="currentColor" opacity="0.25" />
+              <path d="M40 24 C28 32, 8 34, 12 44 C16 52, 36 44, 40 30 C44 44, 64 52, 68 44 C72 34, 52 32, 40 24Z"
+                fill="currentColor" opacity="0.15" />
+            </svg>
+          </div>
+          <a href="#visita" class="btn-primary btn-large" id="btn-cta-visita">Planifica tu visita hoy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ FOOTER ══ -->
+  <footer class="site-footer" id="contacto" aria-label="Pie de página">
+    <div class="footer-inner container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo" aria-label="Volver al inicio">
+            <div class="logo-mark logo-mark--footer">
+              <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 24 C14 18, 4 16, 6 8 C8 2, 18 6, 20 14 C22 6, 32 2, 34 8 C36 16, 26 18, 20 24Z"
+                  fill="currentColor" opacity="0.7" />
+                <path d="M20 24 C14 30, 4 32, 6 40 C8 46, 18 42, 20 34 C22 42, 32 46, 34 40 C36 32, 26 30, 20 24Z"
+                  fill="currentColor" opacity="0.4" />
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">Casa Museo</span>
+              <span class="logo-subtitle">Hermanas Mirabal</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Memoria · Resistencia · Legado</p>
+          <div class="footer-social" aria-label="Redes sociales">
+            <a href="#" class="social-link" id="footer-facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="footer-instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="footer-youtube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98l5.73 3.02-5.73 3.02z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h3 class="footer-group-title">Explorar</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#las-hermanas">Las Hermanas</a></li>
+            <li><a href="#la-casa">La Casa</a></li>
+            <li><a href="#timeline">Cronología</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h3 class="footer-group-title">Visita</h3>
+          <ul>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#visita">Horarios y entradas</a></li>
+            <li><a href="#visita">Grupos escolares</a></li>
+            <li><a href="#visita">Investigadores</a></li>
+            <li><a href="#cta-section">Planifica tu visita</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-group">
+          <h3 class="footer-group-title">Contáctanos</h3>
+          <address>
+            <p>Carretera Salcedo – Tenares,<br />Ojo de Agua, Salcedo 41000,<br />República Dominicana</p>
+            <p><a href="tel:+18095770760">+1 (809) 577-0760</a></p>
+            <p><a href="mailto:info@museomirabal.gob.do">info@museomirabal.gob.do</a></p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">
+          © Casa Museo Hermanas Mirabal. Refidomsa Todos los derechos reservados.
+        </p>
+        <p class="footer-tribute">
+          En memoria de Patria, Minerva y María Teresa Mirabal — Las Mariposas
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

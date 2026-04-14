@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor Visual — Casa Museo Hermanas Mirabal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+<div class="ed-shell">
+
+  <!-- ── TOP BAR ───────────────────────────────────── -->
+  <header class="ed-topbar" id="ed-topbar">
+    <div class="ed-brand">
+      <svg class="ed-brand-mark" viewBox="0 0 30 36" fill="none">
+        <path d="M15 18 C10.5 13.5 3 12 4.5 6 C6 1.5 13.5 4.5 15 10.5 C16.5 4.5 24 1.5 25.5 6 C27 12 19.5 13.5 15 18Z" fill="white" opacity="0.85"/>
+        <path d="M15 18 C10.5 22.5 3 24 4.5 30 C6 34.5 13.5 31.5 15 25.5 C16.5 31.5 24 34.5 25.5 30 C27 24 19.5 22.5 15 18Z" fill="white" opacity="0.4"/>
+      </svg>
+      <div class="ed-brand-text">
+        <span class="ed-brand-name">Editor Visual</span>
+        <span class="ed-brand-sub">Casa Museo Hermanas Mirabal</span>
+      </div>
+    </div>
+
+    <div class="ed-viewport-btns" id="ed-viewport-btns" role="group" aria-label="Tamaño de vista previa">
+      <button class="ed-vp-btn active" id="vp-desktop" data-width="100%" title="Escritorio (pantalla completa)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Escritorio
+      </button>
+      <button class="ed-vp-btn" id="vp-tablet" data-width="768px" title="Tablet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        Tablet
+      </button>
+      <button class="ed-vp-btn" id="vp-mobile" data-width="390px" title="Móvil">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        Móvil
+      </button>
+    </div>
+
+    <div class="ed-topbar-actions">
+      <span class="ed-changes-badge" id="ed-changes-badge" style="display:none">
+        <span class="ed-changes-dot"></span>
+        <span id="ed-changes-count">0</span> cambios
+      </span>
+      <button class="ed-btn-ghost" id="btn-reload" title="Recargar vista previa (descarta cambios no exportados)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+        Recargar
+      </button>
+      <button class="ed-btn-primary" id="btn-export" title="Descargar index.html con todos los cambios aplicados">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar HTML
+      </button>
+    </div>
+  </header>
+
+  <!-- ── MAIN BODY ──────────────────────────────────── -->
+  <div class="ed-main">
+
+    <!-- Sidebar -->
+    <aside class="ed-sidebar" id="ed-sidebar">
+      <div class="ed-sidebar-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="ed-search" placeholder="Buscar campo…" autocomplete="off" spellcheck="false">
+        <button class="ed-search-clear" id="ed-search-clear" title="Limpiar búsqueda" style="display:none">✕</button>
+      </div>
+
+      <div class="ed-no-results" id="ed-no-results" style="display:none">
+        No se encontraron campos para "<span id="ed-search-term"></span>"
+      </div>
+
+      <div class="ed-panels" id="ed-panels">
+        <div class="ed-loading-msg">
+          <div class="ed-spinner"></div>
+          Cargando editor…
+        </div>
+      </div>
+    </aside>
+
+    <!-- Preview -->
+    <div class="ed-preview-wrap" id="ed-preview-wrap">
+      <div class="ed-browser-chrome">
+        <div class="ed-browser-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="ed-browser-address-bar">
+          <svg viewBox="0 0 16 16" fill="currentColor" style="width:10px;height:10px;opacity:.4;flex-shrink:0"><path d="M8 1a2 2 0 012 2v4H6V3a2 2 0 012-2zm3 6V3a3 3 0 00-6 0v4a2 2 0 00-2 2v5a2 2 0 002 2h6a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg>
+          <span>localhost:8765 — index.html</span>
+        </div>
+        <div class="ed-iframe-status" id="ed-iframe-status">
+          <span class="ed-status-dot"></span>Cargando…
+        </div>
+      </div>
+
+      <div class="ed-iframe-outer" id="ed-iframe-outer">
+        <div class="ed-iframe-container" id="ed-iframe-container">
+          <iframe
+            id="site-iframe"
+            src="index.html"
+            title="Vista previa — Casa Museo Hermanas Mirabal"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Toast notification -->
+<div class="ed-toast" id="ed-toast" role="status" aria-live="polite"></div>
+
+<script src="editor.js"></script>
+</body>
+</html>
