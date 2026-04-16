@@ -38,6 +38,13 @@
   --space-xl:   6rem;
   --space-2xl:  8rem;
 
+  /* Typography sizes */
+  --fs-hero:     7rem;
+  --fs-heading:  3.75rem;
+  --fs-intro:    3.25rem;
+  --fs-subtitle: 1.375rem;
+  --fs-body:     1.0625rem;
+
   /* Layout */
   --max-width:  1280px;
   --gutter:     clamp(1.5rem, 5vw, 4rem);
@@ -48,6 +55,20 @@
   --transition-fast: 200ms var(--ease-out);
   --transition-med:  400ms var(--ease-out);
   --transition-slow: 700ms var(--ease-out);
+
+  /* ── Timeline / Línea de Tiempo ──────────────────── */
+  --tl-year-col:    7.5rem;   /* ancho columna año          */
+  --tl-marker-col:  2.5rem;   /* ancho columna punto        */
+  --tl-col-gap:     1.5rem;   /* gap horizontal entre celdas*/
+  --tl-item-gap:    2rem;     /* espacio entre hitos        */
+  --tl-marker-size: 10px;     /* diámetro del punto         */
+  --tl-year-size:   1.25rem;  /* tamaño fuente año          */
+  --tl-event-size:  1.25rem;  /* tamaño fuente título evento*/
+  --tl-desc-size:   0.9375rem;/* tamaño fuente descripción  */
+
+  /* ── Imágenes ────────────────────────────────────── */
+  --img-casa-min-h:  600px;   /* altura mínima imagen Casa  */
+  --img-sister-maxh: 9999px;  /* altura máx fotos hermanas  */
 }
 
 /* ── RESET & BASE ───────────────────────────────────────────── */
@@ -104,7 +125,7 @@ address { font-style: normal; }
 .section-title {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-size: clamp(calc(var(--fs-heading) * 0.6), 5vw, var(--fs-heading));
   line-height: 1.1;
   color: var(--charcoal);
   letter-spacing: -0.01em;
@@ -112,7 +133,7 @@ address { font-style: normal; }
 
 .section-subtitle {
   font-family: var(--font-sans);
-  font-size: 1.0625rem;
+  font-size: var(--fs-body);
   color: var(--stone);
   font-weight: 300;
   margin-top: 1rem;
@@ -474,7 +495,7 @@ address { font-style: normal; }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(calc(var(--fs-hero) * 0.43), 8vw, var(--fs-hero));
   font-weight: 300;
   line-height: 1.0;
   color: var(--ivory-light);
@@ -487,7 +508,7 @@ address { font-style: normal; }
 
 .hero-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(1.0625rem, 2vw, 1.375rem);
+  font-size: clamp(calc(var(--fs-subtitle) * 0.77), 2vw, var(--fs-subtitle));
   font-weight: 300;
   font-style: italic;
   line-height: 1.5;
@@ -560,7 +581,7 @@ address { font-style: normal; }
 
 .intro-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(calc(var(--fs-intro) * 0.62), 4vw, var(--fs-intro));
   font-weight: 400;
   line-height: 1.15;
   color: var(--charcoal);
@@ -578,7 +599,7 @@ address { font-style: normal; }
 
 .intro-text {
   font-family: var(--font-sans);
-  font-size: 1.0625rem;
+  font-size: var(--fs-body);
   line-height: 1.8;
   color: var(--charcoal-soft);
   font-weight: 300;
@@ -724,6 +745,7 @@ address { font-style: normal; }
 .sister-image {
   width: 100%;
   aspect-ratio: 4/3;
+  max-height: var(--img-sister-maxh);
   position: relative;
   display: flex;
   align-items: center;
@@ -880,7 +902,7 @@ address { font-style: normal; }
 .casa-image-wrap {
   position: relative;
   height: 100%;
-  min-height: 600px;
+  min-height: var(--img-casa-min-h);
 }
 
 .casa-img {
@@ -989,7 +1011,7 @@ address { font-style: normal; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 7.5rem;
+  left: var(--tl-year-col);
   top: 0;
   bottom: 0;
   width: 1px;
@@ -998,10 +1020,10 @@ address { font-style: normal; }
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 7.5rem 2.5rem 1fr;
-  gap: 0 1.5rem;
+  grid-template-columns: var(--tl-year-col) var(--tl-marker-col) 1fr;
+  gap: 0 var(--tl-col-gap);
   align-items: flex-start;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--tl-item-gap);
   position: relative;
 }
 
@@ -1009,7 +1031,7 @@ address { font-style: normal; }
 
 .timeline-year {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: var(--tl-year-size);
   font-weight: 400;
   color: var(--green-deep);
   text-align: right;
@@ -1018,8 +1040,8 @@ address { font-style: normal; }
 }
 
 .timeline-marker {
-  width: 10px;
-  height: 10px;
+  width: var(--tl-marker-size);
+  height: var(--tl-marker-size);
   border-radius: 50%;
   background: var(--terracotta);
   border: 2px solid var(--ivory-light);
@@ -1045,7 +1067,7 @@ address { font-style: normal; }
 
 .timeline-event {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: var(--tl-event-size);
   font-weight: 400;
   color: var(--charcoal);
   margin-bottom: 0.5rem;
@@ -1054,7 +1076,7 @@ address { font-style: normal; }
 
 .timeline-content p {
   font-family: var(--font-sans);
-  font-size: 0.9375rem;
+  font-size: var(--tl-desc-size);
   line-height: 1.75;
   color: var(--stone);
   font-weight: 300;
@@ -1725,38 +1747,50 @@ address { font-style: normal; }
 
 /* Medium */
 @media (max-width: 900px) {
+  /* Variables responsive para tablet — independientes de escritorio */
+  :root {
+    --space-2xl:      5rem;
+    --space-lg:       3rem;
+    /* Timeline tablet */
+    --tl-year-col:    6rem;
+    --tl-marker-col:  2rem;
+    /* Imágenes tablet */
+    --img-casa-min-h: 300px;
+  }
+
   .intro-grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
 
+  /* 2 columnas en tablet: Minerva arriba completa, luego Patria y M.Teresa */
   .sisters-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
   }
 
+  /* Minerva (featured) ocupa todo el ancho en tablet */
   .sister-card--featured {
+    grid-column: span 2;
     order: -1;
+  }
+
+  /* Imágenes más bajas en tablet */
+  .sister-image {
+    aspect-ratio: 3/2;
+  }
+
+  /* Patria y M.Teresa: imagen cuadrada */
+  .sister-card:not(.sister-card--featured) .sister-image {
+    aspect-ratio: 1/1;
   }
 
   .casa-grid {
     grid-template-columns: 1fr;
   }
 
-  .casa-image-wrap {
-    min-height: 420px;
-  }
-
   .casa-text-col {
-    padding: var(--space-lg) var(--gutter);
-  }
-
-  .timeline::before {
-    left: 6rem;
-  }
-
-  .timeline-item {
-    grid-template-columns: 6rem 2rem 1fr;
+    padding: var(--space-md) var(--gutter);
   }
 
   .activities-grid {
@@ -1773,6 +1807,16 @@ address { font-style: normal; }
 
   .main-nav { display: none; }
   .hamburger { display: flex; }
+
+  /* ── Cuando el menú móvil está abierto se quita backdrop-filter del header:
+     El nav (position:fixed, hijo de site-header) queda "contenido" dentro del
+     header por el containing block que crea backdrop-filter.
+     La clase .menu-open la añade/quita main.js al abrir/cerrar el menú. ── */
+  .site-header.menu-open {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(247, 243, 236, 0.98);
+  }
 
   .main-nav.open {
     display: flex;
@@ -1803,6 +1847,20 @@ address { font-style: normal; }
 
 /* Small */
 @media (max-width: 600px) {
+  /* Variables responsive para móvil — independientes de escritorio y tablet */
+  :root {
+    --space-2xl:      3rem;
+    --space-lg:       2rem;
+    --space-xl:       3.5rem;
+    /* Timeline móvil */
+    --tl-year-col:    4.5rem;
+    --tl-marker-col:  1.5rem;
+    --tl-year-size:   1rem;
+    /* Imágenes móvil */
+    --img-casa-min-h:  220px;
+    --img-sister-maxh: 200px;
+  }
+
   .hero-actions {
     flex-direction: column;
     gap: 0.75rem;
@@ -1815,7 +1873,37 @@ address { font-style: normal; }
   }
 
   .intro-stats {
-    gap: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  /* Hermanas: 1 columna en móvil, imagen corta */
+  .sisters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sister-card--featured {
+    grid-column: span 1;
+  }
+
+  /* Imagen de hermana más corta en móvil */
+  .sister-image,
+  .sister-card:not(.sister-card--featured) .sister-image {
+    aspect-ratio: 16/7;
+  }
+
+  /* Tarjeta más compacta en móvil */
+  .sister-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .sister-image-wrap {
+    margin-bottom: 1.25rem;
+  }
+
+  .sister-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
   }
 
   .activities-grid {
@@ -1828,7 +1916,7 @@ address { font-style: normal; }
 
   .footer-top {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 
   .footer-bottom {
@@ -1836,15 +1924,20 @@ address { font-style: normal; }
     align-items: flex-start;
   }
 
-  .timeline::before { left: 4.5rem; }
-  .timeline-item { grid-template-columns: 4.5rem 1.5rem 1fr; }
-  .timeline-year { font-size: 1rem; }
-
   .btn-header { display: none; }
 
   .footer-tagline,
   .footer-social {
     padding-left: 0;
+  }
+
+  /* Reducir padding de secciones visit y activities */
+  .activities-section,
+  .visit-section,
+  .timeline-section,
+  .intro-block {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
   }
 }
 

@@ -72,6 +72,9 @@ const sections     = document.querySelectorAll('section[id]');
     const isOpen = mainNav.classList.toggle('open');
     hamburgerBtn.setAttribute('aria-expanded', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    // Sin menu-open en el header el backdrop-filter de .scrolled atrapa
+    // el overlay position:fixed dentro del header y el fondo desaparece.
+    header.classList.toggle('menu-open', isOpen);
 
     // Animate hamburger spans
     const spans = hamburgerBtn.querySelectorAll('span');
@@ -90,6 +93,7 @@ const sections     = document.querySelectorAll('section[id]');
   mainNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mainNav.classList.remove('open');
+      header.classList.remove('menu-open');
       hamburgerBtn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
       const spans = hamburgerBtn.querySelectorAll('span');
@@ -103,6 +107,7 @@ const sections     = document.querySelectorAll('section[id]');
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mainNav.classList.contains('open')) {
       mainNav.classList.remove('open');
+      header.classList.remove('menu-open');
       hamburgerBtn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
       hamburgerBtn.focus();
